@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+	<title>javascript is shit</title>
+</head>
+<head>
+<body>
+	<form>
+	<p><b>введите размер матрицы</b></p>
+	<p><input type="text" name="row" required pattern="^[ 0-9]+$">
+		<input type="submit" value="OK"></p>
+	<p><input type="text" name="col" required pattern="^[ 0-9]+$">
+		<input type="submit" value="OK"></p>
+	</form>
+	<script>
+		var row=document.getElementById("row").value;
+		var col=document.getElementById("col").value;
+		class table{
+			constructor(){
+				this.body=[];
+			}
+			constructor(row,col){
+				this.body=[];
+				for(var i=0;i<row;i++){
+					body[i]=[];
+				}
+			}
+			set value(i,j,_value){
+				this.body[i][j]=_value;
+			}
+			get value(i,j){
+				return this.body[i][j];
+			}
+		}
+		let current=new table(row,col);
+		var value;
+		for(var i=0;i<row;i<col){
+			for(var j=0;j<col;j++){
+				current.value(i,j,j);
+				alert(current.value(i,j));
+			}
+		}
+		
+		
+	</script>
+	
+</body>
+</html>
